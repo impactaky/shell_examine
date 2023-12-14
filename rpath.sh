@@ -20,4 +20,4 @@ rpath () {
 }
 export -f rpath
 
-find /usr/bin | xargs -P1 -I {} bash -c "rpath {}"
+find /usr/bin | xargs -P$(nproc) -I {} bash -c "rpath {}"
