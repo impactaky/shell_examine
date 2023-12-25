@@ -1,4 +1,4 @@
-import $ from "https://deno.land/x/dax_extras/mod.ts";
+import $ from "https://deno.land/x/dax_extras@2.3.1/mod.ts";
 
 async function rpath(path: PathRef) {
   const runPath = (await $`objdump -x ${path}`.stderr("null").noThrow()
